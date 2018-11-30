@@ -1,8 +1,6 @@
 package edu.netcracker.lectures.examples.serialization;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;

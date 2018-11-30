@@ -11,7 +11,6 @@ public class SerializeSample {
                 .lastName("Ivanov")
                 .transientField("some value")
                 .build();
-
         try (OutputStream fileOut =
                      new FileOutputStream("student.ser");
              ObjectOutputStream out = new ObjectOutputStream(fileOut);

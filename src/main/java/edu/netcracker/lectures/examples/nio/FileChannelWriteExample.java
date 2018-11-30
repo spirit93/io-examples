@@ -1,6 +1,6 @@
 package edu.netcracker.lectures.examples.nio;
 
-import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -14,7 +14,7 @@ public class FileChannelWriteExample {
     }
 
     public void writeFile() {
-        try (final FileChannel fileChannel = new FileInputStream(OUTPUT_FILE_PATH).getChannel()) {
+        try (final FileChannel fileChannel = new FileOutputStream(OUTPUT_FILE_PATH).getChannel()) {
             final ByteBuffer buffer = createBuffer(CONTENTS.getBytes().length);
             buffer.put(CONTENTS.getBytes());
             buffer.flip();

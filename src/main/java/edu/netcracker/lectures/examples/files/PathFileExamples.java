@@ -33,14 +33,13 @@ public class PathFileExamples {
             if (!Files.exists(Paths.get("for_demo"))) {
                 Files.createDirectory(Paths.get("for_demo"));
                 Files.createDirectory(Paths.get("for_demo/move"));
-            }
-            else if (!Files.exists(Paths.get("for_demo/move"))) {
+            } else if (!Files.exists(Paths.get("for_demo/move"))) {
                 Files.createDirectory(Paths.get("for_demo/move"));
             }
 
             Files.write(Paths.get("for_demo/files.txt"), new byte[0],
                     StandardOpenOption.CREATE,
-                    StandardOpenOption.TRUNCATE_EXISTING );
+                    StandardOpenOption.TRUNCATE_EXISTING);
             Files.copy(Paths.get("for_demo/files.txt"), Paths.get("for_demo/files_copy.txt"));
             Files.move(Paths.get("for_demo/files.txt"), Paths.get("for_demo/move/files_copy.txt"));
 
